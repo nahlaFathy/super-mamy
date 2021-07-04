@@ -6,11 +6,11 @@
     padding-top: 150px;
     color: #2e323c;
     
-	background: -webkit-gradient(linear, left bottom, left top, from(#c7cabc), to(#eef2de));
-    background: -webkit-linear-gradient(bottom, #c7cabc 0%, #eef2de 100%);
-    background: -moz-linear-gradient(bottom, #c7cabc 0%, #eef2de 100%);
-    background: -o-linear-gradient(bottom, #c7cabc 0%, #eef2de 100%);
-    background: linear-gradient(to top, #c7cabc 0%, #eef2de  100%);
+	background: -webkit-gradient(linear, left bottom, left top, from(white), to(#CEEBCA));
+    background: -webkit-linear-gradient(bottom, #CEEBCA 0%, white 100%);
+    background: -moz-linear-gradient(bottom, #CEEBCA 0%, white 100%);
+    background: -o-linear-gradient(bottom,#CEEBCA 0%, white 100%);
+    background: linear-gradient(to top,#CEEBCA 0%, white 100%);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;

@@ -12,7 +12,7 @@
 
 .cards .card{
     border: none;
-    background-color: #eef2de;
+    background-color: #dcfad8;
     color: rgb(70, 68, 68);
     text-align: center;
 }
@@ -132,7 +132,7 @@ input:focus{
 
 .product-img{
     display: block;
-    height: 200px;
+    height: 220px;
     overflow: hidden;
 }
 

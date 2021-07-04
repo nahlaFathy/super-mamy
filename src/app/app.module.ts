@@ -20,7 +20,6 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { LogginAuthGuardService } from './services/loggin-auth-guard.service';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { OrdersComponent } from './components/orders/orders.component';
-import { AboutComponent } from './components/about/about.component';
 import { AddProductComponent } from './components/product/add-product/add-product.component';
 import { LoginComponent } from './components/login/login.component';
 import { ErrorComponent } from './components/error/error.component';
@@ -41,7 +40,6 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent, canActivate: [AuthGuardService, UserAuthService] },
   { path: 'order', component: OrderComponent, canActivate: [AuthGuardService, UserAuthService] },
   { path: 'orders', component: OrdersComponent, canActivate: [AuthGuardService, AdminAuthService] },
-  { path: 'about', component: AboutComponent },
   { path: '**', component: ErrorComponent },
 ]
 @NgModule({
@@ -57,7 +55,6 @@ const routes: Routes = [
     OrderComponent,
     CartComponent,
     SliderComponent,
-    AboutComponent,
     OrdersComponent,
     AddProductComponent,
     ErrorComponent,

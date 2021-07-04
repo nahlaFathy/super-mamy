@@ -152,11 +152,11 @@
 
   
   .bg-gra-01 {
-    background: -webkit-gradient(linear, left bottom, left top, from(#eef2de), to(#c7cabc));
-    background: -webkit-linear-gradient(bottom, #c7cabc 0%, #eef2de 100%);
-    background: -moz-linear-gradient(bottom, #c7cabc 0%, #eef2de 100%);
-    background: -o-linear-gradient(bottom, #c7cabc 0%, #eef2de 100%);
-    background: linear-gradient(to top, #c7cabc 0%, #eef2de  100%);
+    background: -webkit-gradient(linear, left bottom, left top, from(white), to(#CEEBCA));
+    background: -webkit-linear-gradient(bottom, #CEEBCA 0%, white 100%);
+    background: -moz-linear-gradient(bottom, #CEEBCA 0%, white 100%);
+    background: -o-linear-gradient(bottom,#CEEBCA 0%, white 100%);
+    background: linear-gradient(to top,#CEEBCA 0%, white 100%);
   }
   
   /* ==========================================================================
@@ -503,7 +503,7 @@
     -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-    width: 100%;
+    width: 80%;
     display: table;
   }
   
