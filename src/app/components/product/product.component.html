@@ -1,0 +1,65 @@
+<div class="container cards">
+    <div class="row d-flex justify-content-center">
+        <div *ngIf="user;" class="col-12 product-header text-center">
+            <h2><span>P</span>roducts</h2>
+            <p>“Everything you can imagine is real.”</p>
+            <div class="search-container">
+                <button>
+                    <input #searchInput type="search" id="gsearch" name="gsearch" (keyup)="search(searchInput)"
+                        placeholder="Search..">
+                    <i class="far fa-search"></i>
+                </button>
+            </div>
+
+            <div class="product-btn" *ngIf="isAdmin">
+                <a (click)="isAdding = !isAdding" class="btn-2">
+                    Add new product
+                </a>
+                <!-- <button (click)="isAdding = !isAdding" class="btn btn-outline-primary btn-sm mb-2">Add product</button> -->
+                <app-add-product (addProductEvent)="addProductEvent($event)" *ngIf="isAdding"></app-add-product>
+            </div>
+        </div>
+        <div *ngIf="products.length==0 && user==true">No Items Found ..</div>
+        <div *ngFor="let product of products | paginate: {
+            id: 'listing_pagination', itemsPerPage: 12, currentPage: page, totalItems: totalProducts};index as j"
+            class=" card col-md-3" style="width: 18rem;">
+            <div class="card-body">
+                <div *ngIf="isAdmin;" (click)="removeProduct(product._id,i)"
+                    class="close-div text-right align-self-end">
+                </div>
+                <div class="product-img">
+                    <img src="{{product.image}}" (click)="openImage(imageModal); imageId(product)"
+                        class="img-fluid img-responsive rounded product-image">
+                </div>
+                <h5 class="card-title">{{product.title.slice(0,13)}}</h5>
+                <hr>
+                <div class="card-text text-center">
+                    <p class="details">{{product.details.slice(0,50)}} </p>
+                    <p class="price">${{product.price}} </p>
+                </div>
+                <div class="d-flex flex-column mt-4">
+                    <button (click)="addCart(product._id,j) "[disabled]="buttons[j]"  *ngIf="!isAdmin" class="btn-1">
+                        Add to cart
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <pagination-controls *ngIf="user;" id="listing_pagination" class="text-center paginationNo" maxSize="6"
+        directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+
+    <!-- modal to open product -->
+    <ng-template #imageModal let-modal>
+        <div class="modal-header">
+            <h5 class="modal-title">Product Details</h5>
+        </div>
+        <div class="modal-body">
+            <img width="100%" src="{{image.image}}">
+        </div>
+        <h5 class="text-center p-3">
+            {{image.title}}
+        </h5>
+        <p class="text-center p-3">{{image.details}}</p>
+    </ng-template>
+</div>

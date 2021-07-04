@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+ /* body {
+      
+    background: -webkit-gradient(linear, left bottom, left top, from(#c7cabc), to(#eef2de));
+    background: -webkit-linear-gradient(bottom, #c7cabc 0%, #eef2de 100%);
+    background: -moz-linear-gradient(bottom, #c7cabc 0%, #eef2de 100%);
+    background: -o-linear-gradient(bottom, #c7cabc 0%, #eef2de 100%);
+    background: linear-gradient(to top, #c7cabc 0%, #eef2de  100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}  */
+
+@font-face {
+    font-family: "PTS";
+    src: url(./assets/fonts/PTSerifCaption-Regular.ttf);
+}
+*{
+    font-family:  PTS, monospace, sans-serif;
+    box-sizing: border-box;
+}

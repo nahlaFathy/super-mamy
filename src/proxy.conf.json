@@ -1,0 +1,10 @@
+{
+    
+        "/api": {
+          "target": ["https://thawing-eyrie-89662.herokuapp.com",
+            "https://api.cloudinary.com/v1_1/ecommerceiti",
+              "http://localhost:4200"],
+          "secure": false
+        }
+      
+}

@@ -1,0 +1,26 @@
+.update-btn{
+    margin-left: 10px;
+    height: 40px;
+}
+
+.date {
+    color: #737373;
+    font-size: 13px;
+    margin-top: -15px;
+}
+
+.products{
+    margin-bottom: 15px;
+}
+
+@media (max-width: 450px) {
+    .order-cart h4{
+        font-size: 15px!important;
+    }
+}
+
+@media (max-width: 250px) {
+    .order-cart h4{
+        font-size: 12px!important;
+    }
+}
