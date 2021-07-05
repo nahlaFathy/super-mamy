@@ -31,10 +31,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
  
-  { path: '', component: HomeComponent ,
-    children:[{path:'', component:SliderComponent},
+  { path: '', component: HomeComponent ,pathMatch: 'full',
+  children:[{path:'', component:SliderComponent},
   { path:'',component:ProductComponent,children:[{path:'',component:AddProductComponent}]} ]},
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] ,pathMatch: 'full' },
   { path: 'register', component: RegisterComponent, canActivate: [LogginAuthGuardService] },
   { path: 'login', component: LoginComponent, canActivate: [LogginAuthGuardService] },
   { path: 'cart', component: CartComponent, canActivate: [AuthGuardService, UserAuthService] },
