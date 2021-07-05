@@ -23,7 +23,6 @@ export class NavbarComponent implements OnInit {
     if (this.eventEmitterService.subsVar==undefined) {    
       this.eventEmitterService.subsVar = this.eventEmitterService.    
       invokeFirstComponentFunction.subscribe((name:string) => {    
-        console.log("emitted")
         this.checkToken();    
         this.user=true
         this.isAdmin= localStorage.getItem("isAdmin") == "true";
@@ -31,7 +30,6 @@ export class NavbarComponent implements OnInit {
     }   
   }
   ngOnChanges() {
-    console.log("change...")
     this.checkToken
   }
   onClick(){
@@ -60,6 +58,5 @@ export class NavbarComponent implements OnInit {
   }
   logOut(){
     localStorage.removeItem('Token')
-    console.log(localStorage.getItem('Token'))
   }
 }
